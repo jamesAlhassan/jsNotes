@@ -27,3 +27,7 @@ const resultFour = numThree + numFive;
 
 console.log(resultFive);
 // 1010
+
+// DATA TYPES
+// Primitive - strings, number, boolean, null, undefined, symbol
+// Object - Arrays, Functions, objects
