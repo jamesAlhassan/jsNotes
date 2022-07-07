@@ -41,3 +41,21 @@ const multiply = function (num1, num2) {
   return num1 * num2;
 };
 const values = [10, 20, multiply(10, 20)];
+
+// COMPARISON OPERATORS
+// ==  checks only value whilst  === checks for value and type
+
+const a = 10;
+const b = 10;
+const c = "10";
+
+if (a == b) {
+  console.log("true");
+}
+if (a == c) {
+  console.log("true");
+}
+
+if (a === "c") {
+  console.log("false");
+}
