@@ -31,3 +31,13 @@ console.log(resultFive);
 // DATA TYPES
 // Primitive - strings, number, boolean, null, undefined, symbol
 // Object - Arrays, Functions, objects
+
+function addvalue(num1, num2) {
+  return num1 + num2;
+}
+const value = addvalue(2, 3);
+// FUNCTION EXPRESSION/ Anonymous functions
+const multiply = function (num1, num2) {
+  return num1 * num2;
+};
+const values = [10, 20, multiply(10, 20)];
