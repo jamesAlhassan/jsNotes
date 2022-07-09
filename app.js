@@ -87,17 +87,104 @@ const resultFour = numThree + numFive;
 // }
 
 // While and do while loops
-let amt = 10;
+// let amt = 10;
 
-while (amt > 1) {
-  console.log(`You have ${amt} in your account`);
-  amt--;
-}
+// while (amt > 1) {
+//   console.log(`You have ${amt} in your account`);
+//   amt--;
+// }
 
 //  code comes before condition, runs at least once
-let money = 12;
+// let money = 12;
 
-do {
-  console.log(`You have ${amt} in your account`);
-  money++;
-} while (money < 10);
+// do {
+//   console.log(`You have ${amt} in your account`);
+//   money++;
+// } while (money < 10);
+
+// const names = ["layla", "farid", "rahma", "maryam", "rahina", "nakiya"];
+// const lastName = "hussein";
+// let fullName = [];
+
+// let i;
+
+// for (i = 0; i < names.length; i++) {
+//   let a = `${names[i]} ${lastName}`;
+//   fullName.push(a);
+// }
+
+// console.log(fullName);
+
+// const gas = [10, 20, 30];
+// const food = [40, 20, 60];
+
+// function calculate(arr1, arr2) {
+//   let totalFood = 0;
+//   let totalGas = 0;
+
+//   for (let i = 0; i < arr1.length; i++) {
+//     console.log({ food: (totalFood += arr1[i]) });
+//   }
+//   for (let i = 0; i < arr2.length; i++) {
+//     console.log({ gas: (totalGas += arr2[i]) });
+//   }
+//   const total = totalFood + totalGas;
+
+//   return total;
+// }
+
+// const overallTotal = calculate(food, gas);
+// console.log({ overallTotal: overallTotal });
+
+// When assigning primitive data type value to a variable, any changes made are does not affect the original value
+let a = 1;
+let b = a;
+
+console.log(a, b);
+//   1 1
+
+b = 3;
+console.log(a, b);
+//  1 3
+
+// However for non-primitive datatypes chanes affect the original value
+
+// let c = [2, 3];
+// let d = c;
+
+// console.log(c, d);
+// // [2,3] [2,3]
+
+// d[0] = 10;
+// console.log(c, d);
+// // [10, 3] [10, 3]
+
+// // objects
+// let person = { name: "kofi" };
+// let person2 = person;
+
+// console.log(person, person2);
+// // { name: "kofi" }
+
+// person2.name = "adwoa";
+// console.log(person, person2);
+
+//  Null and undefined both means no value
+// undefined- js cannot find value
+// null= developer sets value
+
+// Ternary Operator
+2 > 1 ? console.log("this is true") : console.log("this is false");
+
+// CALLBACK FUNCTIONS AND HIGHER ORDER FUNCTIONS
+// Callback functions functions passed as argument(s) to another function or return from another function(closure)
+// Higher order functions accpets another function or returns another as a result
+
+function morning(name) {
+  return `Good morning ${name.toUpperCase()}`;
+}
+
+function greet(name, cb) {
+  console.log(`${cb(name)}! You are welcome ....`);
+}
+greet("kofi", morning);
