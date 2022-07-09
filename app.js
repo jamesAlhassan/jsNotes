@@ -1,29 +1,29 @@
 // IMPLICIT TYPE CONVERSION
 
-const numOne = "john";
-const numTwo = "kofi";
+// const numOne = "john";
+// const numTwo = "kofi";
 
 // Substracting Two Non-digit Strings
-const result = numOne - numTwo;
-console.log(result);
+// const result = numOne - numTwo;
+// console.log(result);
 // NaN
 
-const numThree = "10";
-const numFour = "20";
+// const numThree = "10";
+// const numFour = "20";
 
 // Substracting Two number Strings
-const resultTwo = numThree - numFour;
+// const resultTwo = numThree - numFour;
 
-console.log(resultTwo);
+// console.log(resultTwo);
 //  -10
 
 //  Adding two number strings will be concatenation
-const resultThree = numFour + numThree;
-console.log(resultThree);
+// const resultThree = numFour + numThree;
+// console.log(resultThree);
 //  1020
 
-const numFive = 10;
-const resultFour = numThree + numFive;
+// const numFive = 10;
+// const resultFour = numThree + numFive;
 
 // console.log(resultFive);
 // 1010
@@ -137,14 +137,14 @@ const resultFour = numThree + numFive;
 // console.log({ overallTotal: overallTotal });
 
 // When assigning primitive data type value to a variable, any changes made are does not affect the original value
-let a = 1;
-let b = a;
+// let a = 1;
+// let b = a;
 
-console.log(a, b);
-//   1 1
+// console.log(a, b);
+// //   1 1
 
-b = 3;
-console.log(a, b);
+// b = 3;
+// console.log(a, b);
 //  1 3
 
 // However for non-primitive datatypes chanes affect the original value
@@ -174,17 +174,46 @@ console.log(a, b);
 // null= developer sets value
 
 // Ternary Operator
-2 > 1 ? console.log("this is true") : console.log("this is false");
+// 2 > 1 ? console.log("this is true") : console.log("this is false");
 
 // CALLBACK FUNCTIONS AND HIGHER ORDER FUNCTIONS
 // Callback functions functions passed as argument(s) to another function or return from another function(closure)
 // Higher order functions accpets another function or returns another as a result
 
-function morning(name) {
-  return `Good morning ${name.toUpperCase()}`;
-}
+// function morning(name) {
+//   return `Good morning ${name.toUpperCase()}`;
+// }
 
-function greet(name, cb) {
-  console.log(`${cb(name)}! You are welcome ....`);
-}
-greet("kofi", morning);
+// function greet(name, cb) {
+//   console.log(`${cb(name)}! You are welcome ....`);
+// }
+// greet("kofi", morning);
+
+// ARRAY ITERATORS
+// forEach   - does not return a new array
+
+const people = [
+  { name: "naail", age: 2, positon: "developer" },
+  { name: "rahmah", age: 30, position: "head" },
+];
+
+// people.forEach((person) => console.log(person.positon.toUpperCase()));
+
+// MAP
+// return a new array, does not change size of original array
+
+const newPeople = people.map((person) => {
+  return { firstName: person.name, oldAge: person.age };
+});
+
+const result = people.map((person) => {
+  return `<h1>${person.name}</h1>`;
+});
+console.log(newPeople);
+document.body.innerHTML = result.join("");
+
+// FILTER
+// return a new array, can change original array basd on a condition
+
+const youngPeople = people.filter((item) => item.age <= 10);
+console.log(youngPeople);
