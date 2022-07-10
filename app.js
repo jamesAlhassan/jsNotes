@@ -290,8 +290,8 @@ first.className = "colors text";
 // createTextNode('text content')
 // element.appendChild(childElement)
 
-// const bodyDiv = document.createElement("div");
-// text = document.createTextNode("new text");
-// bodyDiv.appendChild(text);
-// bodyDiv.classList.add("colors");
-// document.body.appendChild(bodyDiv);
+const bodyDiv = document.createElement("div");
+text = document.createTextNode("new text");
+bodyDiv.appendChild(text);
+bodyDiv.classList.add("colors");
+document.body.appendChild(bodyDiv);
