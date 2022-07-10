@@ -193,8 +193,11 @@
 // forEach   - does not return a new array
 
 const people = [
-  { name: "naail", age: 2, positon: "developer" },
-  { name: "rahmah", age: 30, position: "head" },
+  { name: "naail", age: 2, positon: "developer", id: 1, salary: 200 },
+  { name: "rahmah", age: 30, position: "head", id: 2, salary: 300 },
+  { name: "rahina", age: 25, position: "marketer", id: 3, salary: 400 },
+  { name: "maryam", age: 28, position: "secretary", id: 4, salary: 600 },
+  { name: "layla", age: 38, position: "personal", id: 5, salary: 200 },
 ];
 
 // people.forEach((person) => console.log(person.positon.toUpperCase()));
@@ -202,18 +205,74 @@ const people = [
 // MAP
 // return a new array, does not change size of original array
 
-const newPeople = people.map((person) => {
-  return { firstName: person.name, oldAge: person.age };
-});
+// const newPeople = people.map((person) => {
+//   return { firstName: person.name, oldAge: person.age };
+// });
 
-const result = people.map((person) => {
-  return `<h1>${person.name}</h1>`;
-});
-console.log(newPeople);
-document.body.innerHTML = result.join("");
+// const result = people.map((person) => {
+//   return `<h1>${person.name}</h1>`;
+// });
+// console.log(newPeople);
+// document.body.innerHTML = result.join("");
 
 // FILTER
 // return a new array, can change original array basd on a condition
 
-const youngPeople = people.filter((item) => item.age <= 10);
-console.log(youngPeople);
+// const youngPeople = people.filter((item) => item.age <= 10);
+// console.log(youngPeople);
+
+// FIND
+// return a single instance - inthis case object
+// return  first item if match is undefined
+// great for getting unique values
+
+// names = people.find((person) => person.id === 2);
+// console.log(names);
+// console.log(names.name);
+
+// REDUCE
+// reduces to a single value- number, array, object
+// 1 parameter - acc - total of all calculation
+// 2 parameter - curr - current iteration/value
+
+const total = people.reduce(function (acc, curr) {
+  console.log(`total: ${acc}`);
+  console.log(`current: ${curr.salary}`);
+  acc += curr.salary;
+  //   acc must be returned
+  return acc;
+}, 0);
+console.log(total);
+
+// MATH
+// DATE
+const date = new Date();
+console.log(date);
+
+// DOM
+// document.getElementById
+// node-list/ arraylike- some array medthods do work
+// document.getElementsByName
+// document.getElementsByClassName
+// document.querySelector /document.querySelectorAll - array methods work on them
+
+// DOM NAVIGATION/ TRAVERSING
+// parent.childNodes - including whitespace treated as text node
+// parent.children
+// parent.firstChild- whitespace included
+// parent.lastChild- whitespace included
+
+// parentElement
+// child.parentElement
+
+// sibling.previousSibling -whitespace included
+// sibling.nextSibling -whitespace included
+
+// sibling.nextElementSibling
+// sibling.previousElementSibling
+
+// nodeValue
+// textContent
+
+// getAttribute(attributeName)
+// setAttribute('class', first)
