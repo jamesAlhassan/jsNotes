@@ -276,3 +276,22 @@ console.log(date);
 
 // getAttribute(attributeName)
 // setAttribute('class', first)
+
+// className
+const first = document.getElementById("first");
+
+const classValue = first.className;
+console.log(classValue);
+first.className = "colors text";
+
+// classList
+
+// createELement('element')
+// createTextNode('text content')
+// element.appendChild(childElement)
+
+// const bodyDiv = document.createElement("div");
+// text = document.createTextNode("new text");
+// bodyDiv.appendChild(text);
+// bodyDiv.classList.add("colors");
+// document.body.appendChild(bodyDiv);
