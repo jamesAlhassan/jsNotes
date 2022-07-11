@@ -314,6 +314,8 @@ const people = [
 const button = document.querySelector("button");
 const btn = document.querySelector(".btn");
 btn.addEventListener("click", function () {
-  button.classList.add("red");
-  console.log("clicked");
+  // if (button.classList.contains("red")) {
+  //   button.classList.remove("red");
+  // } else button.classList.add("red");
+  button.classList.toggle("red");
 });
