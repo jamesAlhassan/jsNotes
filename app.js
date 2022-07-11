@@ -311,11 +311,22 @@ const people = [
 
 // EVENTS
 // click
-const button = document.querySelector("button");
-const btn = document.querySelector(".btn");
-btn.addEventListener("click", function () {
-  // if (button.classList.contains("red")) {
-  //   button.classList.remove("red");
-  // } else button.classList.add("red");
-  button.classList.toggle("red");
-});
+// const button = document.querySelector("button");
+// const btn = document.querySelector(".btn");
+// btn.addEventListener("click", function () {
+// if (button.classList.contains("red")) {
+//   button.classList.remove("red");
+// } else button.classList.add("red");
+// button.classList.toggle("red");
+// });
+
+// mouse
+// mousedown- button is preesed
+// mouseup- button is released
+// mouseenter- moved onto an element
+// mouseleave- moved out of an element
+
+// key
+// keypress- key is pressed
+// keydown -key is down
+// keyup - key is released
