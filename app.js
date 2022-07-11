@@ -290,8 +290,21 @@ first.className = "colors text";
 // createTextNode('text content')
 // element.appendChild(childElement)
 
-const bodyDiv = document.createElement("div");
-text = document.createTextNode("new text");
-bodyDiv.appendChild(text);
-bodyDiv.classList.add("colors");
-document.body.appendChild(bodyDiv);
+// const bodyDiv = document.createElement("div");
+// text = document.createTextNode("new text");
+// bodyDiv.appendChild(text);
+// bodyDiv.classList.add("colors");
+// document.body.appendChild(bodyDiv);
+// or document.body.insertBefore(bodyDiv, elementtobe inserted before)
+// document.body.replaceChild(newchild. oldchild)
+
+// prepend
+// innerText
+// const heading = document.createElement("h6");
+// heading.innerText("new text");
+// document.body.prepend(heading)
+
+// remove
+// removechild
+
+// innerHTML/ textContent
