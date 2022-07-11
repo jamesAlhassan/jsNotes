@@ -235,19 +235,19 @@ const people = [
 // 1 parameter - acc - total of all calculation
 // 2 parameter - curr - current iteration/value
 
-const total = people.reduce(function (acc, curr) {
-  console.log(`total: ${acc}`);
-  console.log(`current: ${curr.salary}`);
-  acc += curr.salary;
-  //   acc must be returned
-  return acc;
-}, 0);
-console.log(total);
+// const total = people.reduce(function (acc, curr) {
+//   console.log(`total: ${acc}`);
+//   console.log(`current: ${curr.salary}`);
+//   acc += curr.salary;
+//   //   acc must be returned
+//   return acc;
+// }, 0);
+// console.log(total);
 
-// MATH
-// DATE
-const date = new Date();
-console.log(date);
+// // MATH
+// // DATE
+// const date = new Date();
+// console.log(date);
 
 // DOM
 // document.getElementById
@@ -278,11 +278,11 @@ console.log(date);
 // setAttribute('class', first)
 
 // className
-const first = document.getElementById("first");
+// const first = document.getElementById("first");
 
-const classValue = first.className;
-console.log(classValue);
-first.className = "colors text";
+// const classValue = first.className;
+// console.log(classValue);
+// first.className = "colors text";
 
 // classList
 
@@ -308,3 +308,12 @@ first.className = "colors text";
 // removechild
 
 // innerHTML/ textContent
+
+// EVENTS
+// click
+const button = document.querySelector("button");
+const btn = document.querySelector(".btn");
+btn.addEventListener("click", function () {
+  button.classList.add("red");
+  console.log("clicked");
+});
