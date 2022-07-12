@@ -362,3 +362,11 @@ const people = [
 // sessionStorage.getItem('name')
 // sessionStorage.removeItem('name')
 // sessionStorage.clear()
+
+// JSON.stringify(), JSON.parse()
+
+// const friends= ['kofi', 'ama', 'yaw']
+
+// localStorage.setItem('friends', JSON.stringify(friends))
+// const values = JSON.parse(localStorage.getItem('friends'))
+// console.log(values[2]); // yaw
