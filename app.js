@@ -330,3 +330,35 @@ const people = [
 // keypress- key is pressed
 // keydown -key is down
 // keyup - key is released
+
+// submit
+
+// event Object
+// currentTarget
+// preventDefault()
+
+// currentTarget vs target
+// currentTarget- always refers to the element on which the event handler is atteched
+// target- identifies element on which the event occured
+
+//  event propagation- the order in which event handlers are fired up
+// event bubbling- default - from child(ren) to parent
+// event capturing- from parent to child(ren)
+
+// localStorage - data exist for the opening and closing of the browser
+// sessionStorage - data exist while browser is opened
+
+// key pair
+// localStorage
+// localStorage.setItem('name', 'james')
+// same value overwrite previous
+// localStorage.getItem('name')
+// localStorage.removeItem('name')
+// localStorage.clear()
+
+// sessionStorage
+// sessionStorage.setItem('name', 'james')
+// same value overwrite previous
+// sessionStorage.getItem('name')
+// sessionStorage.removeItem('name')
+// sessionStorage.clear()
