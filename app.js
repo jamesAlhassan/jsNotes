@@ -192,13 +192,13 @@
 // ARRAY ITERATORS
 // forEach   - does not return a new array
 
-const people = [
-  { name: "naail", age: 2, positon: "developer", id: 1, salary: 200 },
-  { name: "rahmah", age: 30, position: "head", id: 2, salary: 300 },
-  { name: "rahina", age: 25, position: "marketer", id: 3, salary: 400 },
-  { name: "maryam", age: 28, position: "secretary", id: 4, salary: 600 },
-  { name: "layla", age: 38, position: "personal", id: 5, salary: 200 },
-];
+// const people = [
+//   { name: "naail", age: 2, positon: "developer", id: 1, salary: 200 },
+//   { name: "rahmah", age: 30, position: "head", id: 2, salary: 300 },
+//   { name: "rahina", age: 25, position: "marketer", id: 3, salary: 400 },
+//   { name: "maryam", age: 28, position: "secretary", id: 4, salary: 600 },
+//   { name: "layla", age: 38, position: "personal", id: 5, salary: 200 },
+// ];
 
 // people.forEach((person) => console.log(person.positon.toUpperCase()));
 
@@ -370,3 +370,99 @@ const people = [
 // localStorage.setItem('friends', JSON.stringify(friends))
 // const values = JSON.parse(localStorage.getItem('friends'))
 // console.log(values[2]); // yaw
+
+// DOM PROJECTS
+
+// const colors = ["green", "red", "rgba(133,122,200)", "#f15025"];
+// const btn = document.getElementById("btn");
+// const color = document.querySelector(".color");
+
+// btn.addEventListener("click", function () {
+//   let randomNumber = Math.floor(Math.random() * colors.length);
+//   document.body.style.backgroundColor = colors[randomNumber];
+
+//   color.textContent = colors[randomNumber];
+// });
+
+// const decrease = document.querySelector(".decrease");
+// const increase = document.querySelector(".increase");
+// const reset = document.querySelector(".reset");
+// const number = document.querySelector(".number");
+// const btns = document.querySelectorAll(".btn");
+// let count = 0;
+
+// btns.forEach(function (btn) {
+//   btn.addEventListener("click", function (e) {
+//     let styles = e.currentTarget.classList;
+//     if (styles.contains("decrease")) {
+//       number.textContent = count--;
+//     } else if (styles.contains("increase")) {
+//       number.textContent = count++;
+//     } else if (styles.contains("reset")) {
+//       number.textContent = 0;
+//     }
+//     let colors = number.style.color;
+//     if (count < 0) {
+//       number.style.color = "red";
+//     }
+//     if (count > 0) {
+//       number.style.color = "green";
+//     }
+//     if (count == 0) {
+//       number.style.color = "black";
+//     }
+//   });
+// });
+
+// ARROW FUNCTIONS
+// has no name
+// implicit return keyword if its oneliner
+// {} can be omitted if its oneliner
+// () can be omiited if theres only one parameter
+
+// const sayHello = () => console.log("hello");
+// sayHello();
+
+// const greaterThan = (num1, num2) => {
+//   if (num1 > num2) {
+//     return "num1 greater than num2";
+//   } else {
+//     ("num is not greater than num2");
+//   }
+// };
+
+// const checkOut = greaterThan(2, 4);
+
+// // return an object
+// const object = () => ({ name: "kofi", age: 10 });
+
+// const person = object();
+
+// In a regular function "this" refers to the parent, left of the dot
+// however in an arrow function, "this" refers to its current surrounding scope
+
+const ama = {
+  fName: "ama",
+  lName: "amponsah",
+  sayName: function () {
+    console.log(this);
+    // this here will refer back to the parent ama when called
+    console.log(`Hello, my name is ${this.fName} ${this.lName} `);
+    setTimeout(function () {
+      console.log(`Hello, my name is ${this.fName} ${this.lName} `);
+    }, 5000);
+    //  this here will refer back to the parent window since its not a function of ama, however, had am arrow function being used, it would have refered to ama, since that is the current surrounding scope
+  },
+};
+const adwoa = {
+  fName: "adowa",
+  lName: "afrakomah",
+  sayName: () => {
+    console.log(this);
+    // this here will refer back to its surronding scope window when called
+    console.log(`Hello, my name is ${this.fName} ${this.lName} `);
+  },
+};
+
+ama.sayName();
+adwoa.sayName();
