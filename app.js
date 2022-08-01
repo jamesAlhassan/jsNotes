@@ -441,28 +441,67 @@
 // In a regular function "this" refers to the parent, left of the dot
 // however in an arrow function, "this" refers to its current surrounding scope
 
-const ama = {
-  fName: "ama",
-  lName: "amponsah",
-  sayName: function () {
-    console.log(this);
-    // this here will refer back to the parent ama when called
-    console.log(`Hello, my name is ${this.fName} ${this.lName} `);
-    setTimeout(function () {
-      console.log(`Hello, my name is ${this.fName} ${this.lName} `);
-    }, 5000);
-    //  this here will refer back to the parent window since its not a function of ama, however, had am arrow function being used, it would have refered to ama, since that is the current surrounding scope
-  },
-};
-const adwoa = {
-  fName: "adowa",
-  lName: "afrakomah",
-  sayName: () => {
-    console.log(this);
-    // this here will refer back to its surronding scope window when called
-    console.log(`Hello, my name is ${this.fName} ${this.lName} `);
-  },
-};
+// const ama = {
+//   fName: "ama",
+//   lName: "amponsah",
+//   sayName: function () {
+//     console.log(this);
+//     // this here will refer back to the parent ama when called
+//     console.log(`Hello, my name is ${this.fName} ${this.lName} `);
+//     setTimeout(function () {
+//       console.log(`Hello, my name is ${this.fName} ${this.lName} `);
+//     }, 5000);
+//     //  this here will refer back to the parent window since its not a function of ama, however, had am arrow function being used, it would have refered to ama, since that is the current surrounding scope
+//   },
+// };
+// const adwoa = {
+//   fName: "adowa",
+//   lName: "afrakomah",
+//   sayName: () => {
+//     console.log(this);
+//     // this here will refer back to its surronding scope window when called
+//     console.log(`Hello, my name is ${this.fName} ${this.lName} `);
+//   },
+// };
 
-ama.sayName();
-adwoa.sayName();
+// ama.sayName();
+// adwoa.sayName();
+
+// DESTRUCTURING
+//array
+
+// const fruits = ["orange", "banana", "lemon"];
+// const friends = ["kojo", "kwabena", "kweku", "yaw"];
+
+// const orange = fruits[0]; // orange
+// const banana = fruits[1]; // banana
+
+// const [kojo, , kweku, yaw] = friends; // kojo, kweku, yaw
+
+// swap variables
+
+// let first = "koko";
+// let second = ("bobo"[(second, first)] = [first, second]);
+
+// object
+// const akare = {
+//   first: "akare",
+//   last: "alhassan",
+//   siblings: { brother: "abgaan", sister: "awa peter" },
+// };
+
+// const first = akare.first
+// const second = akare.second
+
+// const {
+//   first: fName,
+//   last,
+//   siblings: { brother: elderBro, sister: jnrSis },
+// } = akare;
+
+// function printPerson({ first, last, siblings: { brother } }) {
+//   // or const {first, last, siblings:{brother}}
+//   console.log(first, last, brother);
+// }
+
+// printPerson(akare);
