@@ -505,3 +505,31 @@
 // }
 
 // printPerson(akare);
+
+// startsWith(), endsWith(). includes(), repeat()
+
+// for of
+// const countries = ["ghana", "togo", "benin", "ivory coast"];
+// const longName = "James Alhassan Dema gaoge";
+// const shortName = "";
+
+// for (letter of longName) {
+//   if (letter === "") {
+//     continue;
+//   } else {
+//     shortName += letter;
+//   }
+// }
+
+// for (country of countries) {
+//   if (country === "benin") {
+//     break;
+//   }
+// }
+
+// spread operator
+// splits into single items and copy them
+const letters = ["a", "b", "c", "d", "e"];
+const numbers = [1, 2, 3, 4, 5];
+
+const alphaNumeric = [...letters, ...numbers];
