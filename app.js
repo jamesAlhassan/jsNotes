@@ -529,7 +529,40 @@
 
 // spread operator
 // splits into single items and copy them
-const letters = ["a", "b", "c", "d", "e"];
-const numbers = [1, 2, 3, 4, 5];
+// const letters = ["a", "b", "c", "d", "e"];
+// const numbers = [1, 2, 3, 4, 5];
 
-const alphaNumeric = [...letters, ...numbers];
+// const alphaNumeric = [...letters, ...numbers];
+
+// const kaka = {
+//   name: "koka",
+//   job: "ui designer",
+// };
+// const newPerson = { ...kaka, city: "sowutuom", name: "papa" };
+
+// the rest operator is the opposote of the spread operator
+// gathers / collects items
+
+const rooms = ["r1", "r2", "r3", "r4", "r5"];
+
+const [r1, r2, ...rest] = rooms;
+
+const person = {
+  name: "BA",
+  lastName: "MSC",
+  third: "PHD",
+};
+
+const { first, ...rest1 } = person;
+
+// REST OPERATOR IF FOR PARAMETERS WHILST SPREAD FOR ARGUMENTS
+const testScores = [78, 156, 856];
+const getAverae = (name, scores) => {
+  let total = 0;
+  for (const score of scores) {
+    total += scores;
+  }
+  console.log(`${name}'s Average score is ${total / scores.length}`);
+};
+
+getAverae(person.name, ...testScores);
